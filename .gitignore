@@ -1,0 +1,22 @@
+# Frontend
+frontend/node_modules/
+frontend/dist/
+
+# Backend
+backend/venv/
+backend/__pycache__/
+backend/*.pyc
+
+# Environment files
+.env
+backend/.env
+
+# Database
+*.db
+
+# IDE
+.vscode/
+.idea/
+
+# Optional
+stitch_kisaan_marg_voice_assistant/
