@@ -1,0 +1,230 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kisaan Marg - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "on-background": "#1a1d11",
+                      "tertiary-fixed": "#ffdcbe",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#f0f2df",
+                      "primary": "#00450d",
+                      "on-tertiary-container": "#ffb66b",
+                      "primary-fixed-dim": "#91d78a",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f3f5e1",
+                      "on-secondary-container": "#00731e",
+                      "tertiary-container": "#794500",
+                      "outline-variant": "#c0c9bb",
+                      "on-surface": "#1a1d11",
+                      "secondary-container": "#91f78e",
+                      "on-primary-fixed": "#002203",
+                      "secondary": "#006e1c",
+                      "on-surface-variant": "#41493e",
+                      "on-secondary-fixed-variant": "#005313",
+                      "surface-dim": "#d9dcc8",
+                      "surface": "#f9fbe7",
+                      "outline": "#717a6d",
+                      "primary-fixed": "#acf4a4",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f9fbe7",
+                      "inverse-primary": "#91d78a",
+                      "surface-container-high": "#e8ead6",
+                      "primary-container": "#1b5e20",
+                      "on-secondary-fixed": "#002204",
+                      "on-primary-container": "#90d689",
+                      "tertiary": "#583100",
+                      "surface-container-highest": "#e2e4d1",
+                      "on-tertiary-fixed-variant": "#693c00",
+                      "surface-container": "#edf0dc",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#2f3225",
+                      "background": "#f9fbe7",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e2e4d1",
+                      "on-primary-fixed-variant": "#0c5216",
+                      "secondary-fixed": "#94f990",
+                      "secondary-fixed-dim": "#78dc77",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#2a6b2c",
+                      "tertiary-fixed-dim": "#ffb870",
+                      "on-tertiary-fixed": "#2c1600"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "2.5rem",
+                      "stack-gap": "1rem",
+                      "touch-target-min": "56px",
+                      "margin-desktop": "4rem",
+                      "gutter": "1.5rem",
+                      "margin-mobile": "1rem"
+              },
+              "fontFamily": {
+                      "label-lg": [
+                              "Atkinson Hyperlegible Next", "sans-serif"
+                      ],
+                      "body-lg": [
+                              "Atkinson Hyperlegible Next", "sans-serif"
+                      ],
+                      "body-xl": [
+                              "Atkinson Hyperlegible Next", "sans-serif"
+                      ],
+                      "headline-lg": [
+                              "Be Vietnam Pro", "sans-serif"
+                      ],
+                      "headline-lg-mobile": [
+                              "Be Vietnam Pro", "sans-serif"
+                      ],
+                      "headline-xl": [
+                              "Be Vietnam Pro", "sans-serif"
+                      ]
+              },
+              "fontSize": {
+                      "label-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-xl": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 0,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 24;
+        }
+        
+        .pulse-effect {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+
+        @keyframes pulse-ring {
+            0% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7);
+            }
+            70% {
+                transform: scale(1);
+                box-shadow: 0 0 0 16px rgba(255, 152, 0, 0);
+            }
+            100% {
+                transform: scale(0.95);
+                box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
+            }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col antialiased pb-safe">
+<!-- TopAppBar from JSON -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full z-10 transition-colors duration-200">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Kisaan Marg</span>
+</div>
+<button class="flex items-center gap-2 font-label-lg text-label-lg bg-primary text-on-primary px-6 py-3 rounded-full shadow-sm hover:opacity-80 transition-colors min-h-touch-target-min">
+    <span class="material-symbols-outlined text-2xl" data-icon="language">language</span>
+    <span class="">हिंदी ▾</span>
+</button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-gutter pt-8 pb-32 max-w-[800px] mx-auto w-full gap-section-gap">
+<!-- Greeting Area -->
+<section class="text-center w-full max-w-lg bg-surface-container-lowest p-6 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)] flex flex-col items-center gap-4">
+<div class="flex items-center gap-3">
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary">बोलकर पूछें</h1>
+<button aria-label="Play greeting audio" class="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center hover:bg-surface-container-high transition-colors shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl" data-icon="volume_up">volume_up</span>
+</button>
+</div>
+</section>
+<!-- Voice Interaction Hub -->
+<section class="flex flex-col items-center justify-center gap-6 py-8">
+<button aria-label="Start Voice Recording" class="pulse-effect bg-primary text-on-primary w-24 h-24 md:w-32 md:h-32 rounded-full flex items-center justify-center shadow-[0_4px_16px_rgba(255,152,0,0.2)] hover:scale-105 transition-transform duration-300">
+<span class="material-symbols-outlined text-[48px] md:text-[64px]" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+
+</section>
+<!-- Suggestions Grid -->
+<section class="w-full grid grid-cols-1 md:grid-cols-3 gap-stack-gap"><button class="bg-surface-container-lowest border border-outline-variant rounded-full py-4 px-6 flex items-center gap-3 hover:bg-surface-container-low transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.05)] w-full text-left min-h-touch-target-min"><span class="material-symbols-outlined text-primary text-2xl">trending_up</span><span class="font-label-lg text-label-lg text-on-surface">आज मेरे टमाटर का क्या भाव है?</span></button><button class="bg-surface-container-lowest border border-outline-variant rounded-full py-4 px-6 flex items-center gap-3 hover:bg-surface-container-low transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.05)] w-full text-left min-h-touch-target-min"><span class="material-symbols-outlined text-primary text-2xl">gavel</span><span class="font-label-lg text-label-lg text-on-surface">व्यापारी ने ₹20 बताया, क्या करूँ?</span></button><button class="bg-surface-container-lowest border border-outline-variant rounded-full py-4 px-6 flex items-center gap-3 hover:bg-surface-container-low transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.05)] w-full text-left min-h-touch-target-min"><span class="material-symbols-outlined text-primary text-2xl">storefront</span><span class="font-label-lg text-label-lg text-on-surface">आज कहाँ बेचूँ?</span></button><button class="bg-surface-container-lowest border border-outline-variant rounded-full py-4 px-6 flex items-center gap-3 hover:bg-surface-container-low transition-colors shadow-[0_2px_8px_rgba(0,0,0,0.05)] w-full text-left min-h-touch-target-min"><span class="material-symbols-outlined text-primary text-2xl">insights</span><span class="font-label-lg text-label-lg text-on-surface">क्या भाव बढ़ेगा?</span></button></section>
+<footer class="mt-auto pt-8 text-center w-full"><a href="#" class="inline-flex items-center gap-2 font-label-lg text-label-lg text-primary hover:underline mb-4"><span class="">⌨️</span> <span class="">टाइप करें</span></a>
+<p class="font-body-lg text-body-lg text-on-surface-variant opacity-70">Demo with mock mandi data</p>
+</footer>
+</main>
+<!-- BottomNavBar from JSON -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 flex justify-around items-center h-touch-target-min px-gutter pb-safe bg-surface-container dark:bg-surface-container-highest shadow-sm docked full-width bottom-0 rounded-t-xl transition-transform duration-150">
+<a class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="arrow_back">arrow_back</span>
+<span class="font-label-lg text-label-lg text-xs">Back</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-2 hover:opacity-80" href="#">
+<span class="material-symbols-outlined text-2xl mb-1" data-icon="home" style="font-variation-settings: 'FILL' 1;">home</span>
+<span class="font-label-lg text-label-lg text-xs">Home</span>
+</a>
+</nav>
+
+
+
+
+</body></html>

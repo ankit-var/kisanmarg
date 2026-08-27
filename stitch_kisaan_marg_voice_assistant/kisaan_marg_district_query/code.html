@@ -1,0 +1,225 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Kisaan Marg - District Selection</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600;700&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1d11",
+                        "tertiary-fixed": "#ffdcbe",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f2df",
+                        "primary": "#00450d",
+                        "on-tertiary-container": "#ffb66b",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f5e1",
+                        "on-secondary-container": "#00731e",
+                        "tertiary-container": "#794500",
+                        "outline-variant": "#c0c9bb",
+                        "on-surface": "#1a1d11",
+                        "secondary-container": "#91f78e",
+                        "on-primary-fixed": "#002203",
+                        "secondary": "#006e1c",
+                        "on-surface-variant": "#41493e",
+                        "on-secondary-fixed-variant": "#005313",
+                        "surface-dim": "#d9dcc8",
+                        "surface": "#f9fbe7",
+                        "outline": "#717a6d",
+                        "primary-fixed": "#acf4a4",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9fbe7",
+                        "inverse-primary": "#91d78a",
+                        "surface-container-high": "#e8ead6",
+                        "primary-container": "#1b5e20",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary-container": "#90d689",
+                        "tertiary": "#583100",
+                        "surface-container-highest": "#e2e4d1",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container": "#edf0dc",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3225",
+                        "background": "#f9fbe7",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e4d1",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "secondary-fixed": "#94f990",
+                        "secondary-fixed-dim": "#78dc77",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#2a6b2c",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "on-tertiary-fixed": "#2c1600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "2.5rem",
+                        "stack-gap": "1rem",
+                        "touch-target-min": "56px",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Atkinson Hyperlegible Next"],
+                        "body-lg": ["Atkinson Hyperlegible Next"],
+                        "body-xl": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-xl": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 600, 'GRAD' 0, 'opsz' 24;
+        }
+        .mic-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(1); opacity: 0.8; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+        /* Mobile specific hiding of TopAppBar per intent */
+        @media (max-width: 767px) {
+            .mobile-hide-nav { display: none !important; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg antialiased">
+<!-- TopAppBar - Header Section -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full z-40 mobile-hide-nav shadow-sm">
+<div class="flex items-center gap-4">
+<button class="text-on-surface-variant hover:bg-surface-container-low rounded-full p-2 transition-colors duration-200">
+<span class="material-symbols-outlined" data-icon="language">language</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary dark:text-primary-fixed-dim tracking-tight">Kisaan Marg</h1>
+</div>
+<button class="text-on-primary bg-primary dark:bg-primary-fixed-dim dark:text-on-primary-fixed font-label-lg text-label-lg hover:opacity-90 rounded-full px-6 py-2 transition-all duration-200 flex items-center gap-1 shadow-sm">
+            हिंदी <span class="material-symbols-outlined text-[20px]" data-icon="arrow_drop_down">arrow_drop_down</span>
+        </button>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col px-margin-mobile md:px-margin-desktop py-section-gap max-w-[800px] mx-auto w-full pt-8 md:pt-12 pb-32">
+<!-- Progress Tracker -->
+<div aria-label="Progress: Step 1 of 2" class="w-full mb-8">
+<div class="flex gap-2 h-3 rounded-full overflow-hidden bg-surface-container-highest">
+<div class="w-1/2 bg-secondary rounded-full"></div>
+<div class="w-1/2 bg-transparent rounded-full"></div>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface-variant mt-2 text-right">Step 1 of 2</p>
+</div>
+<!-- Question Section -->
+<div class="flex flex-col items-center text-center mb-10 gap-stack-gap bg-surface-container-lowest p-6 md:p-8 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-surface-container-highest">
+<button aria-label="Play question audio" class="bg-surface-container-low hover:bg-surface-container w-16 h-16 rounded-full flex items-center justify-center text-primary transition-colors duration-200 shadow-sm">
+<span class="material-symbols-outlined text-4xl" data-icon="volume_up" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+<h2 class="font-headline-xl text-headline-xl text-primary-container">आपका जिला कौन सा है?</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant">(Which is your district?)</p>
+</div>
+<!-- Fallback Options -->
+<div class="flex flex-col gap-stack-gap mt-4 w-full"><div class="flex flex-col items-center gap-4 mb-8">
+    <div class="flex items-center gap-2 text-primary font-headline-lg-mobile">
+        <span class="material-symbols-outlined text-3xl">mic</span>
+        <span class="">अपना जिला बोलें</span>
+    </div>
+    <div class="w-full bg-surface-container-low p-6 rounded-xl border-2 border-dashed border-primary/30 flex flex-col items-center gap-4">
+        <p class="text-on-surface-variant font-body-lg">आपने कहा:</p>
+        <p class="text-headline-xl font-headline-xl text-primary">Nashik</p>
+        <div class="flex gap-4 w-full mt-2">
+            <button class="flex-grow bg-secondary text-on-secondary font-label-lg py-4 rounded-full shadow-sm hover:opacity-90 transition-all active:scale-95">
+                हाँ, यही है
+            </button>
+            <button class="flex-grow border-2 border-outline text-on-surface font-label-lg py-4 rounded-full hover:bg-surface-container-low transition-all active:scale-95">
+                दूसरा जिला
+            </button>
+        </div>
+    </div>
+</div>
+<p class="font-label-lg text-label-lg text-on-surface-variant mb-2 px-2">या सूची में से चुनें:</p>
+<button class="flex items-center gap-4 bg-surface-container-lowest hover:bg-surface-container-low p-4 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-surface-container-highest transition-all duration-200 active:scale-[0.98] h-[80px] w-full text-left group">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<span class="font-body-xl text-body-xl text-on-surface flex-grow font-semibold">Nashik</span>
+</button>
+<button class="flex items-center gap-4 bg-surface-container-lowest hover:bg-surface-container-low p-4 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-surface-container-highest transition-all duration-200 active:scale-[0.98] h-[80px] w-full text-left group">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<span class="font-body-xl text-body-xl text-on-surface flex-grow font-semibold">Pune</span>
+</button>
+<button class="flex items-center gap-4 bg-surface-container-lowest hover:bg-surface-container-low p-4 rounded-xl shadow-[0_4px_12px_rgba(0,0,0,0.1)] border border-surface-container-highest transition-all duration-200 active:scale-[0.98] h-[80px] w-full text-left group">
+<div class="w-12 h-12 bg-secondary-container rounded-full flex items-center justify-center text-on-secondary-container group-hover:bg-primary-container group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="location_on">location_on</span>
+</div>
+<span class="font-body-xl text-body-xl text-on-surface flex-grow font-semibold">Ahmednagar</span>
+</button>
+</div>
+</main>
+<!-- Voice Input Floating Action Area (Bottom Third) -->
+<div class="fixed bottom-0 left-0 w-full p-6 md:p-8 flex justify-center pb-safe z-50 bg-gradient-to-t from-background via-background to-transparent pointer-events-none">
+<div class="relative pointer-events-auto">
+<!-- Pulsing Ring Background -->
+<div class="absolute inset-0 bg-[#FF9800] rounded-full opacity-0" id="mic-ring"></div>
+<button aria-label="Tap to speak" class="relative z-10 w-[88px] h-[88px] bg-primary-container text-on-primary rounded-full flex items-center justify-center shadow-[0_8px_24px_rgba(255,152,0,0.3)] transition-transform duration-300 hover:scale-105 active:scale-95" id="mic-btn">
+<span class="material-symbols-outlined text-4xl" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+</div>
+<!-- Navigation Suppressed for this transactional step -->
+<!-- BottomNavBar intentionally excluded per 'Shell Visibility & Relevance' rules -->
+<script>
+        // Simple JS for Mic button interaction
+        const micBtn = document.getElementById('mic-btn');
+        const micRing = document.getElementById('mic-ring');
+        let isListening = false;
+
+        micBtn.addEventListener('click', () => {
+            isListening = !isListening;
+            if (isListening) {
+                micRing.classList.add('mic-pulse');
+                micBtn.classList.replace('bg-primary-container', 'bg-[#FF9800]');
+                micBtn.classList.replace('text-on-primary', 'text-white');
+            } else {
+                micRing.classList.remove('mic-pulse');
+                micBtn.classList.replace('bg-[#FF9800]', 'bg-primary-container');
+                micBtn.classList.replace('text-white', 'text-on-primary');
+            }
+        });
+    </script>
+
+
+
+
+</body></html>

@@ -1,0 +1,231 @@
+<!DOCTYPE html><html class="light" lang="hi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kisaan Marg - Bargaining Assistant</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&amp;family=Be+Vietnam+Pro:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1d11",
+                        "tertiary-fixed": "#ffdcbe",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f2df",
+                        "primary": "#00450d",
+                        "on-tertiary-container": "#ffb66b",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f5e1",
+                        "on-secondary-container": "#00731e",
+                        "tertiary-container": "#794500",
+                        "outline-variant": "#c0c9bb",
+                        "on-surface": "#1a1d11",
+                        "secondary-container": "#91f78e",
+                        "on-primary-fixed": "#002203",
+                        "secondary": "#006e1c",
+                        "on-surface-variant": "#41493e",
+                        "on-secondary-fixed-variant": "#005313",
+                        "surface-dim": "#d9dcc8",
+                        "surface": "#f9fbe7",
+                        "outline": "#717a6d",
+                        "primary-fixed": "#acf4a4",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9fbe7",
+                        "inverse-primary": "#91d78a",
+                        "surface-container-high": "#e8ead6",
+                        "primary-container": "#1b5e20",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary-container": "#90d689",
+                        "tertiary": "#583100",
+                        "surface-container-highest": "#e2e4d1",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container": "#edf0dc",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3225",
+                        "background": "#f9fbe7",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e4d1",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "secondary-fixed": "#94f990",
+                        "secondary-fixed-dim": "#78dc77",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#2a6b2c",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "on-tertiary-fixed": "#2c1600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "2.5rem",
+                        "stack-gap": "1rem",
+                        "touch-target-min": "56px",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Atkinson Hyperlegible Next"],
+                        "body-lg": ["Atkinson Hyperlegible Next"],
+                        "body-xl": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-xl": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.4); }
+            70% { box-shadow: 0 0 0 16px rgba(255, 152, 0, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(255, 152, 0, 0); }
+        }
+        .waveform-bar {
+            animation: wave 1s infinite alternate;
+        }
+        .waveform-bar:nth-child(2) { animation-delay: 0.1s; }
+        .waveform-bar:nth-child(3) { animation-delay: 0.2s; }
+        .waveform-bar:nth-child(4) { animation-delay: 0.3s; }
+        .waveform-bar:nth-child(5) { animation-delay: 0.4s; }
+        @keyframes wave {
+            0% { transform: scaleY(0.5); }
+            100% { transform: scaleY(1.5); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg overflow-x-hidden md:hidden pb-24">
+<!-- TopAppBar -->
+<header class="bg-surface docked full-width top-0 z-40 sticky shadow-sm">
+<div class="flex justify-between items-center px-margin-mobile py-4 w-full h-touch-target-min">
+<button aria-label="Language" class="flex items-center justify-center w-touch-target-min h-touch-target-min text-primary hover:bg-surface-container-low transition-colors duration-200 rounded-full">
+<span class="material-symbols-outlined" data-icon="language" style="font-variation-settings: 'FILL' 1;">language</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile text-primary tracking-tight">Kisaan Marg</h1>
+<button aria-label="Toggle Language" class="font-label-lg text-label-lg text-primary bg-surface-container-low hover:bg-surface-variant transition-colors duration-200 px-4 py-2 rounded-full flex items-center gap-1 border border-outline-variant">
+                हिंदी <span class="material-symbols-outlined text-[20px]" style="font-variation-settings: 'FILL' 0;">arrow_drop_down</span>
+            </button>
+</div>
+</header>
+<!-- Main Canvas -->
+<main class="flex-grow flex flex-col px-margin-mobile pt-section-gap pb-safe w-full max-w-md mx-auto">
+<!-- Screen Title & Icon -->
+<div class="flex flex-col items-center justify-center mb-stack-gap text-center">
+<div class="w-24 h-24 bg-surface-container-high rounded-full flex items-center justify-center mb-4 shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-5xl text-tertiary-container" data-icon="handshake" style="font-variation-settings: 'FILL' 1;">handshake</span>
+</div>
+<h2 class="font-headline-xl text-headline-xl text-on-surface mb-2">मोलभाव में मदद</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">बाजार की जानकारी और सलाह</p>
+</div>
+<!-- Audio Response Card (Bento Style) -->
+<section class="bg-surface-container-lowest rounded-[1.5rem] p-gutter shadow-[0_4px_12px_rgba(0,0,0,0.1)] mb-stack-gap relative overflow-hidden border border-surface-variant">
+<!-- Decorative Accent -->
+<div class="absolute top-0 left-0 w-2 h-full bg-secondary"></div>
+<div class="flex flex-col h-full pl-2">
+<div class="flex items-center mb-4 text-secondary">
+<span class="material-symbols-outlined mr-2" data-icon="record_voice_over" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+<span class="font-label-lg text-label-lg uppercase tracking-wider">सुझाव</span>
+</div>
+<p class="font-body-xl text-body-xl text-on-surface mb-6 leading-relaxed">
+                    'पास की मंडी में भाव अधिक है। मुझे ₹16 से ₹18 मिल सकता है।'
+                </p>
+<!-- Audio Playback UI -->
+<div class="bg-surface-container rounded-xl p-4 flex items-center justify-between mt-auto border border-outline-variant">
+<button aria-label="Play advice" class="w-14 h-14 bg-primary text-on-primary rounded-full flex items-center justify-center shadow-md hover:bg-primary-container transition-colors shrink-0">
+<span class="material-symbols-outlined text-3xl" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-grow mx-4 h-12 flex items-center justify-around overflow-hidden px-2 gap-1">
+<!-- Simulated Waveform -->
+<div class="w-2 h-3 bg-tertiary-container rounded-full waveform-bar"></div>
+<div class="w-2 h-6 bg-tertiary-container rounded-full waveform-bar"></div>
+<div class="w-2 h-8 bg-tertiary-container rounded-full waveform-bar"></div>
+<div class="w-2 h-4 bg-tertiary-container rounded-full waveform-bar"></div>
+<div class="w-2 h-10 bg-tertiary-container rounded-full waveform-bar"></div>
+<div class="w-2 h-5 bg-tertiary-container rounded-full waveform-bar opacity-50"></div>
+<div class="w-2 h-3 bg-tertiary-container rounded-full waveform-bar opacity-50"></div>
+<div class="w-2 h-2 bg-tertiary-container rounded-full waveform-bar opacity-50"></div>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface-variant shrink-0">0:12</span>
+</div>
+</div>
+</section>
+<!-- Actions Container (Bottom Third Ergonomics) -->
+<div class="mt-auto pt-section-gap flex flex-col items-center gap-stack-gap">
+<!-- Extra Large Replay / Mic Button (Floating Effect) -->
+<button aria-label="Replay or Ask again" class="w-24 h-24 bg-surface-container-lowest text-primary rounded-full flex flex-col items-center justify-center shadow-[0_8px_16px_rgba(255,152,0,0.2)] border-2 border-outline-variant pulse-animation hover:bg-surface-container transition-all active:scale-95">
+<span class="material-symbols-outlined text-4xl mb-1 text-[#FF9800]" data-icon="mic" style="font-variation-settings: 'FILL' 1;">mic</span>
+<span class="font-label-lg text-[14px] leading-tight text-on-surface-variant font-bold">पूछें</span>
+</button>
+<!-- Secondary Action Button -->
+<button class="w-full h-touch-target-min bg-surface-container-high text-on-surface border border-outline rounded-xl flex items-center justify-center gap-2 hover:bg-surface-variant transition-colors shadow-sm active:scale-[0.98]">
+<span class="material-symbols-outlined" data-icon="search" style="font-variation-settings: 'FILL' 0;">search</span>
+<span class="font-label-lg text-label-lg">नई कीमत जाँचें</span>
+</button>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="bg-surface-container docked full-width bottom-0 rounded-t-xl shadow-[0_-2px_10px_rgba(0,0,0,0.05)] fixed w-full z-50 flex justify-around items-center h-[80px] px-gutter pb-safe md:hidden border-t-0">
+<!-- Back (Inactive) -->
+<button aria-label="Back" class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="arrow_back" style="font-variation-settings: 'FILL' 0;">arrow_back</span>
+<span class="font-label-lg text-[12px] leading-tight">Back</span>
+</button>
+<!-- Home (Inactive - as we are in a specific tool/assistant) -->
+<button aria-label="Home" class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="home" style="font-variation-settings: 'FILL' 0;">home</span>
+<span class="font-label-lg text-[12px] leading-tight">Home</span>
+</button>
+</nav>
+<script>
+        // Simple script to toggle waveform animation state on play button click
+        document.addEventListener('DOMContentLoaded', () => {
+            const playBtn = document.querySelector('button[aria-label="Play advice"]');
+            const bars = document.querySelectorAll('.waveform-bar');
+            let isPlaying = true; // Start playing conceptually
+
+            playBtn.addEventListener('click', () => {
+                const icon = playBtn.querySelector('span');
+                isPlaying = !isPlaying;
+                
+                if (isPlaying) {
+                    icon.textContent = 'pause';
+                    icon.setAttribute('data-icon', 'pause');
+                    bars.forEach(bar => bar.style.animationPlayState = 'running');
+                } else {
+                    icon.textContent = 'play_arrow';
+                    icon.setAttribute('data-icon', 'play_arrow');
+                    bars.forEach(bar => bar.style.animationPlayState = 'paused');
+                }
+            });
+        });
+    </script>
+
+
+</body></html>

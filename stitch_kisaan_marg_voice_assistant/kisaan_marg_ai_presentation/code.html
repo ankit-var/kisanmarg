@@ -1,0 +1,257 @@
+<!DOCTYPE html><html class="light" lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kisaan Marg - How it works</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&amp;family=Be+Vietnam+Pro:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-error-container": "#93000a",
+                      "on-background": "#1a1d11",
+                      "tertiary-fixed": "#ffdcbe",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#f0f2df",
+                      "primary": "#00450d",
+                      "on-tertiary-container": "#ffb66b",
+                      "primary-fixed-dim": "#91d78a",
+                      "on-error": "#ffffff",
+                      "surface-container-low": "#f3f5e1",
+                      "on-secondary-container": "#00731e",
+                      "tertiary-container": "#794500",
+                      "outline-variant": "#c0c9bb",
+                      "on-surface": "#1a1d11",
+                      "secondary-container": "#91f78e",
+                      "on-primary-fixed": "#002203",
+                      "secondary": "#006e1c",
+                      "on-surface-variant": "#41493e",
+                      "on-secondary-fixed-variant": "#005313",
+                      "surface-dim": "#d9dcc8",
+                      "surface": "#f9fbe7",
+                      "outline": "#717a6d",
+                      "primary-fixed": "#acf4a4",
+                      "error": "#ba1a1a",
+                      "surface-bright": "#f9fbe7",
+                      "inverse-primary": "#91d78a",
+                      "surface-container-high": "#e8ead6",
+                      "primary-container": "#1b5e20",
+                      "on-secondary-fixed": "#002204",
+                      "on-primary-container": "#90d689",
+                      "tertiary": "#583100",
+                      "surface-container-highest": "#e2e4d1",
+                      "on-tertiary-fixed-variant": "#693c00",
+                      "surface-container": "#edf0dc",
+                      "on-primary": "#ffffff",
+                      "inverse-surface": "#2f3225",
+                      "background": "#f9fbe7",
+                      "error-container": "#ffdad6",
+                      "surface-variant": "#e2e4d1",
+                      "on-primary-fixed-variant": "#0c5216",
+                      "secondary-fixed": "#94f990",
+                      "secondary-fixed-dim": "#78dc77",
+                      "surface-container-lowest": "#ffffff",
+                      "on-secondary": "#ffffff",
+                      "surface-tint": "#2a6b2c",
+                      "tertiary-fixed-dim": "#ffb870",
+                      "on-tertiary-fixed": "#2c1600"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "section-gap": "2.5rem",
+                      "stack-gap": "1rem",
+                      "touch-target-min": "56px",
+                      "margin-desktop": "4rem",
+                      "gutter": "1.5rem",
+                      "margin-mobile": "1rem"
+              },
+              "fontFamily": {
+                      "label-lg": [
+                              "Atkinson Hyperlegible Next"
+                      ],
+                      "body-lg": [
+                              "Atkinson Hyperlegible Next"
+                      ],
+                      "body-xl": [
+                              "Atkinson Hyperlegible Next"
+                      ],
+                      "headline-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-lg-mobile": [
+                              "Be Vietnam Pro"
+                      ],
+                      "headline-xl": [
+                              "Be Vietnam Pro"
+                      ]
+              },
+              "fontSize": {
+                      "label-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "24px",
+                                      "letterSpacing": "0.5px",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "body-lg": [
+                              "20px",
+                              {
+                                      "lineHeight": "28px",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-xl": [
+                              "24px",
+                              {
+                                      "lineHeight": "32px",
+                                      "fontWeight": "500"
+                              }
+                      ],
+                      "headline-lg": [
+                              "32px",
+                              {
+                                      "lineHeight": "40px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-lg-mobile": [
+                              "28px",
+                              {
+                                      "lineHeight": "34px",
+                                      "fontWeight": "700"
+                              }
+                      ],
+                      "headline-xl": [
+                              "40px",
+                              {
+                                      "lineHeight": "48px",
+                                      "fontWeight": "700"
+                              }
+                      ]
+              }
+      },
+          },
+        }
+      </script>
+<style>
+        .card-shadow {
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+      </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-lg min-h-screen flex flex-col">
+<!-- Top App Bar -->
+<header class="bg-surface dark:bg-surface-dim font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg docked full-width top-0 transition-colors duration-200 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-primary dark:text-primary-fixed-dim" style="font-variation-settings: 'FILL' 1;">language</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary dark:text-primary-fixed-dim">Kisaan Marg</span>
+</div>
+<button class="bg-surface-container-low text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-variant px-6 py-2 rounded-full transition-colors duration-200 border border-outline-variant flex items-center gap-1">
+            <span class="">हिंदी</span>
+            <span class="material-symbols-outlined text-sm">arrow_drop_down</span>
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow flex flex-col items-center px-margin-mobile md:px-margin-desktop py-section-gap max-w-[800px] mx-auto w-full">
+<!-- Header Section -->
+<div class="text-center mb-section-gap w-full">
+<div class="inline-flex items-center justify-center bg-primary-container text-on-primary-container rounded-full px-6 py-3 mb-6 shadow-sm">
+<span class="material-symbols-outlined mr-2" style="font-variation-settings: 'FILL' 1;">qr_code_2</span>
+<span class="font-label-lg text-label-lg">AI सलाह</span>
+</div>
+<h1 class="font-headline-xl text-headline-xl text-primary mb-4">कैसे काम करता है?</h1>
+<p class="font-body-xl text-body-xl text-on-surface-variant max-w-2xl mx-auto">
+                किसान मार्ग आपको अपनी फसल का सही मूल्य प्राप्त करने में मदद करता है।
+            </p>
+</div>
+<!-- Features Grid (Bento Style) -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-stack-gap w-full mb-section-gap">
+<!-- Feature 1 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 card-shadow border border-surface-container flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary-container opacity-20 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-3xl">mic</span>
+</div>
+<h3 class="font-body-xl text-body-xl text-primary z-10">1. आपकी आवाज़ समझता है</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant z-10">
+                    बस माइक बटन दबाएं और अपनी फसल का नाम और मात्रा बताएं।
+                </p>
+</div>
+<!-- Feature 2 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 card-shadow border border-surface-container flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary-container opacity-20 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-3xl">query_stats</span>
+</div>
+<h3 class="font-body-xl text-body-xl text-primary z-10">2. मंडी के भाव की तुलना</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant z-10">
+                    आस-पास की मंडियों में आज के ताज़ा भाव खोजता है और तुलना करता है।
+                </p>
+</div>
+<!-- Feature 3 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 card-shadow border border-surface-container flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary-container opacity-20 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-3xl">local_shipping</span>
+</div>
+<h3 class="font-body-xl text-body-xl text-primary z-10">3. ट्रांसपोर्ट खर्च का अनुमान</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant z-10">
+                    दूरी के आधार पर वाहन का खर्च जोड़कर असली मुनाफा बताता है।
+                </p>
+</div>
+<!-- Feature 4 -->
+<div class="bg-surface-container-lowest rounded-xl p-6 card-shadow border border-surface-container flex flex-col gap-4 relative overflow-hidden group">
+<div class="absolute -right-8 -top-8 w-32 h-32 bg-secondary-container opacity-20 rounded-full group-hover:scale-150 transition-transform duration-500"></div>
+<div class="w-14 h-14 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center z-10">
+<span class="material-symbols-outlined text-3xl">record_voice_over</span>
+</div>
+<h3 class="font-body-xl text-body-xl text-primary z-10">4. सरल हिंदी में सलाह</h3>
+<p class="font-body-lg text-body-lg text-on-surface-variant z-10">
+                    आपको आसान भाषा में बताता है कि कौन सी मंडी ले जाना सही रहेगा।
+                </p>
+</div>
+</div>
+<!-- Disclaimer -->
+<div class="bg-error-container text-on-error-container rounded-lg p-4 w-full flex items-start gap-4 mb-section-gap">
+<span class="material-symbols-outlined mt-1">warning</span>
+<p class="font-body-lg text-body-lg font-medium">
+                यह एक प्रोटोटाइप है। सभी डेटा काल्पनिक है। यह वास्तविक मंडी भाव या ट्रांसपोर्ट दरों को नहीं दर्शाता है।
+            </p>
+</div>
+<!-- CTA Button -->
+<div class="w-full flex justify-center pb-24 md:pb-0">
+<button class="bg-primary text-on-primary font-label-lg text-label-lg rounded-full px-8 py-4 min-h-[56px] flex items-center justify-center gap-2 hover:bg-surface-tint transition-colors duration-200 w-full md:w-auto shadow-md">
+<span class="">प्रोटोटाइप शुरू करें</span>
+<span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</main>
+<!-- Bottom Nav Bar (Mobile Only) -->
+<nav class="md:hidden bg-surface-container dark:bg-surface-container-highest docked full-width bottom-0 rounded-t-xl shadow-sm fixed w-full z-50 flex justify-around items-center h-touch-target-min px-gutter pb-safe">
+<button class="flex flex-col items-center justify-center text-on-surface-variant hover:opacity-80 transition-transform duration-150 flex-1 py-2">
+<span class="material-symbols-outlined mb-1">arrow_back</span>
+<span class="font-label-lg text-label-lg text-sm">Back</span>
+</button>
+<button class="flex flex-col items-center justify-center bg-secondary-container text-on-secondary-container rounded-full px-6 py-2 scale-95 transition-transform duration-150 flex-1">
+<span class="material-symbols-outlined mb-1">home</span>
+<span class="font-label-lg text-label-lg text-sm">Home</span>
+</button>
+</nav>
+
+
+</body></html>

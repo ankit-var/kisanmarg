@@ -1,0 +1,217 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kisaan Marg - Listening</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error-container": "#93000a",
+                    "on-background": "#1a1d11",
+                    "tertiary-fixed": "#ffdcbe",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#f0f2df",
+                    "primary": "#00450d",
+                    "on-tertiary-container": "#ffb66b",
+                    "primary-fixed-dim": "#91d78a",
+                    "on-error": "#ffffff",
+                    "surface-container-low": "#f3f5e1",
+                    "on-secondary-container": "#00731e",
+                    "tertiary-container": "#794500",
+                    "outline-variant": "#c0c9bb",
+                    "on-surface": "#1a1d11",
+                    "secondary-container": "#91f78e",
+                    "on-primary-fixed": "#002203",
+                    "secondary": "#006e1c",
+                    "on-surface-variant": "#41493e",
+                    "on-secondary-fixed-variant": "#005313",
+                    "surface-dim": "#d9dcc8",
+                    "surface": "#f9fbe7",
+                    "outline": "#717a6d",
+                    "primary-fixed": "#acf4a4",
+                    "error": "#ba1a1a",
+                    "surface-bright": "#f9fbe7",
+                    "inverse-primary": "#91d78a",
+                    "surface-container-high": "#e8ead6",
+                    "primary-container": "#1b5e20",
+                    "on-secondary-fixed": "#002204",
+                    "on-primary-container": "#90d689",
+                    "tertiary": "#583100",
+                    "surface-container-highest": "#e2e4d1",
+                    "on-tertiary-fixed-variant": "#693c00",
+                    "surface-container": "#edf0dc",
+                    "on-primary": "#ffffff",
+                    "inverse-surface": "#2f3225",
+                    "background": "#f9fbe7",
+                    "error-container": "#ffdad6",
+                    "surface-variant": "#e2e4d1",
+                    "on-primary-fixed-variant": "#0c5216",
+                    "secondary-fixed": "#94f990",
+                    "secondary-fixed-dim": "#78dc77",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary": "#ffffff",
+                    "surface-tint": "#2a6b2c",
+                    "tertiary-fixed-dim": "#ffb870",
+                    "on-tertiary-fixed": "#2c1600"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "spacing": {
+                    "section-gap": "2.5rem",
+                    "stack-gap": "1rem",
+                    "touch-target-min": "56px",
+                    "margin-desktop": "4rem",
+                    "gutter": "1.5rem",
+                    "margin-mobile": "1rem"
+            },
+            "fontFamily": {
+                    "label-lg": ["Atkinson Hyperlegible Next", "sans-serif"],
+                    "body-lg": ["Atkinson Hyperlegible Next", "sans-serif"],
+                    "body-xl": ["Atkinson Hyperlegible Next", "sans-serif"],
+                    "headline-lg": ["Be Vietnam Pro", "sans-serif"],
+                    "headline-lg-mobile": ["Be Vietnam Pro", "sans-serif"],
+                    "headline-xl": ["Be Vietnam Pro", "sans-serif"]
+            },
+            "fontSize": {
+                    "label-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "600" }],
+                    "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                    "body-xl": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                    "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                    "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                    "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+        /* Ambient Soft Background */
+        body {
+            background: radial-gradient(circle at 50% 50%, theme('colors.surface-bright') 0%, theme('colors.surface-container') 100%);
+            margin: 0;
+            overflow-x: hidden;
+        }
+
+        /* Material Icons Base */
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+
+        /* Waveform Animation */
+        @keyframes wave {
+            0%, 100% { height: 12px; opacity: 0.4; }
+            50% { height: 72px; opacity: 1; }
+        }
+        
+        .wave-bar {
+            width: 8px;
+            border-radius: theme('borderRadius.full');
+            background-color: theme('colors.secondary');
+            animation: wave 1.2s infinite ease-in-out;
+            box-shadow: 0 0 8px theme('colors.secondary-fixed-dim');
+        }
+
+        .wave-bar:nth-child(1) { animation-delay: -1.0s; }
+        .wave-bar:nth-child(2) { animation-delay: -0.8s; }
+        .wave-bar:nth-child(3) { animation-delay: -0.6s; height: 96px; } /* Center bar taller */
+        .wave-bar:nth-child(4) { animation-delay: -0.4s; }
+        .wave-bar:nth-child(5) { animation-delay: -0.2s; }
+        .wave-bar:nth-child(6) { animation-delay: 0s; }
+
+        /* Subtle Pulse Container */
+        .pulse-ring {
+            position: absolute;
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            background-color: theme('colors.secondary-container');
+            opacity: 0.2;
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+            z-index: 0;
+        }
+
+        @keyframes pulse-ring {
+            0% { transform: scale(0.8); opacity: 0.4; }
+            100% { transform: scale(1.5); opacity: 0; }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen text-on-surface font-body-lg flex flex-col items-center justify-between">
+<!-- Top Navigation / Status Header (Simplified for focused state) -->
+<header class="w-full flex justify-center items-center py-6 px-gutter md:px-margin-desktop bg-transparent z-10"><div class="w-full max-w-2xl flex justify-end items-center">
+  <button class="flex items-center space-x-2 px-4 py-2 rounded-full border border-outline-variant bg-surface-container-lowest text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low transition-all duration-200" type="button">
+    <span class="">हिंदी</span>
+    <span class="material-symbols-outlined text-[20px]">arrow_drop_down</span>
+  </button>
+</div></header>
+<!-- Main Canvas: Listening State -->
+<main class="flex-1 w-full max-w-2xl flex flex-col items-center justify-center px-gutter md:px-margin-desktop z-10 relative">
+<!-- Status Text -->
+<h1 class="text-primary font-headline-xl text-headline-xl text-center mb-16 tracking-tight drop-shadow-sm">
+            सुन रहा हूँ...
+        </h1>
+<!-- Animated Waveform Container -->
+<div class="relative w-full h-48 flex items-center justify-center mb-16">
+<!-- Background Pulse effect -->
+<div class="pulse-ring"></div>
+<!-- Waveform Bars -->
+<div class="flex items-center space-x-2 md:space-x-3 z-10 h-full">
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar !bg-primary !shadow-primary-fixed" style="animation: wave 1.2s infinite ease-in-out; animation-delay: -0.6s;"></div>
+<div class="wave-bar !bg-primary !shadow-primary-fixed" style="animation: wave 1.2s infinite ease-in-out; animation-delay: -0.4s;"></div>
+<div class="wave-bar"></div>
+<div class="wave-bar"></div>
+</div>
+</div>
+<!-- Live Transcript Feedback -->
+<div class="bg-surface-container-highest/50 backdrop-blur-md rounded-2xl p-6 w-full text-center border border-outline-variant/30 shadow-sm transition-all duration-300 min-h-[100px] flex items-center justify-center">
+<p class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface opacity-90 animate-pulse">
+                "टमाटर कहाँ बेचूँ?"
+            </p>
+</div>
+</main>
+<!-- Bottom Actions: Transactional Controls -->
+<!-- Note: Standard Nav Shell suppressed for this focused modal state -->
+<div class="w-full max-w-md px-gutter mb-4 text-center">
+  <button class="w-full py-2 px-4 rounded-full border border-outline-variant/30 bg-surface-container-low/50 text-on-surface-variant font-label-lg text-label-lg hover:bg-surface-container-low transition-all duration-200 flex items-center justify-center space-x-2" type="button">
+    <span class="">आवाज़ समझ नहीं आई?</span>
+    <span class="flex items-center text-primary">
+      <span class="material-symbols-outlined mr-1 text-[20px]">keyboard</span>
+      <span class="">नंबर लिखें</span>
+    </span>
+  </button>
+</div><footer class="w-full max-w-md px-gutter pb-8 pt-4 flex space-x-4 z-10">
+<!-- Cancel Action -->
+<button class="flex-1 h-touch-target-min flex items-center justify-center rounded-full border-2 border-outline-variant text-on-surface-variant bg-surface-container-lowest font-label-lg text-label-lg hover:bg-surface-container-low active:scale-95 transition-all duration-200" type="button">
+<span class="material-symbols-outlined mr-2" data-weight="fill" style="font-variation-settings: 'FILL' 0;">close</span>
+            रद्द करें
+        </button>
+<!-- Stop Action (Primary intent focus) -->
+<button class="flex-1 h-touch-target-min flex items-center justify-center rounded-full bg-primary text-on-primary shadow-md shadow-primary-container/20 font-label-lg text-label-lg hover:bg-primary/90 active:scale-95 transition-all duration-200" type="button">
+<span class="material-symbols-outlined mr-2" data-weight="fill" style="font-variation-settings: 'FILL' 1;">stop_circle</span>
+            रोकें
+        </button>
+</footer>
+
+
+
+
+</body></html>

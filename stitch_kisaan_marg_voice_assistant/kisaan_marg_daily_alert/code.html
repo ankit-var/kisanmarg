@@ -1,0 +1,195 @@
+<!DOCTYPE html><html lang="hi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0" name="viewport">
+<title>Kisaan Marg - Daily Alert Screen</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:wght@400;500;600&amp;family=Be+Vietnam+Pro:wght@700&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1d11",
+                        "tertiary-fixed": "#ffdcbe",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f2df",
+                        "primary": "#00450d",
+                        "on-tertiary-container": "#ffb66b",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f5e1",
+                        "on-secondary-container": "#00731e",
+                        "tertiary-container": "#794500",
+                        "outline-variant": "#c0c9bb",
+                        "on-surface": "#1a1d11",
+                        "secondary-container": "#91f78e",
+                        "on-primary-fixed": "#002203",
+                        "secondary": "#006e1c",
+                        "on-surface-variant": "#41493e",
+                        "on-secondary-fixed-variant": "#005313",
+                        "surface-dim": "#d9dcc8",
+                        "surface": "#f9fbe7",
+                        "outline": "#717a6d",
+                        "primary-fixed": "#acf4a4",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9fbe7",
+                        "inverse-primary": "#91d78a",
+                        "surface-container-high": "#e8ead6",
+                        "primary-container": "#1b5e20",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary-container": "#90d689",
+                        "tertiary": "#583100",
+                        "surface-container-highest": "#e2e4d1",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container": "#edf0dc",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3225",
+                        "background": "#f9fbe7",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e4d1",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "secondary-fixed": "#94f990",
+                        "secondary-fixed-dim": "#78dc77",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#2a6b2c",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "on-tertiary-fixed": "#2c1600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "2.5rem",
+                        "stack-gap": "1rem",
+                        "touch-target-min": "56px",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Atkinson Hyperlegible Next"],
+                        "body-lg": ["Atkinson Hyperlegible Next"],
+                        "body-xl": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-xl": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg">
+<!-- TopAppBar (Transactional - Hidden or Simplified Navigation) -->
+<header class="bg-surface dark:bg-surface-dim docked full-width top-0 flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full z-50">
+<div class="flex items-center gap-4">
+<button aria-label="Go Back" class="text-on-surface-variant hover:bg-surface-container-low transition-colors duration-200 p-2 rounded-full flex items-center justify-center h-touch-target-min w-touch-target-min">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary dark:text-primary-fixed-dim">Kisaan Marg</h1>
+</div>
+<div class="text-on-surface-variant"><button class="flex items-center gap-1 bg-surface-container-high text-on-surface px-4 py-2 rounded-full hover:bg-surface-variant transition-colors duration-200 border border-outline-variant">
+<span class="font-label-lg text-label-lg">हिंदी</span>
+<span class="material-symbols-outlined text-body-lg">arrow_drop_down</span>
+</button></div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-margin-mobile md:px-margin-desktop py-section-gap max-w-[800px] mx-auto w-full">
+<!-- Voice Interaction Area -->
+<div class="bg-surface-container-low rounded-xl p-8 md:p-12 w-full flex flex-col items-center text-center shadow-[0_4px_12px_rgba(0,0,0,0.1)] mb-section-gap relative overflow-hidden">
+<!-- Ambient Background Element -->
+<div class="absolute inset-0 opacity-10 pointer-events-none" style="background-image: url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%2300450d\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');"></div>
+<div class="bg-primary-container text-on-primary-container rounded-full p-6 mb-stack-gap animate-pulse relative z-10 flex items-center justify-center w-24 h-24 shadow-[0_4px_20px_rgba(255,152,0,0.2)]">
+<span class="material-symbols-outlined text-4xl" data-icon="record_voice_over" style="font-variation-settings: 'FILL' 1;">record_voice_over</span>
+</div>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-primary mb-stack-gap relative z-10">
+                क्या आप रोज़ टमाटर का भाव सुनना चाहते हैं?
+            </h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant mb-section-gap relative z-10">
+                Do you want to hear tomato prices daily?
+            </p>
+<!-- Audio Waveform Visualization (Simplified) -->
+<div class="flex items-center gap-1 h-12 mb-stack-gap opacity-70">
+<div class="w-2 h-4 bg-primary rounded-full"></div>
+<div class="w-2 h-8 bg-primary rounded-full"></div>
+<div class="w-2 h-12 bg-primary rounded-full"></div>
+<div class="w-2 h-6 bg-primary rounded-full"></div>
+<div class="w-2 h-10 bg-primary rounded-full"></div>
+<div class="w-2 h-4 bg-primary rounded-full"></div>
+<div class="w-2 h-8 bg-primary rounded-full"></div>
+</div>
+</div>
+<!-- Action Choices -->
+<div class="w-full grid grid-cols-1 md:grid-cols-2 gap-stack-gap mb-section-gap" id="action-buttons">
+<button class="bg-primary text-on-primary rounded-xl h-touch-target-min flex items-center justify-center gap-4 px-6 hover:bg-surface-tint transition-colors duration-200 shadow-md" onclick="handleChoice('yes')">
+<span class="material-symbols-outlined" data-icon="notifications_active">notifications_active</span>
+<span class="font-label-lg text-label-lg">हाँ, रोज़ बताएँ</span>
+</button>
+<button class="bg-surface-container-high text-on-surface rounded-xl h-touch-target-min flex items-center justify-center gap-4 px-6 hover:bg-surface-variant transition-colors duration-200 border border-outline-variant" onclick="handleChoice('no')">
+<span class="material-symbols-outlined" data-icon="notifications_off">notifications_off</span>
+<span class="font-label-lg text-label-lg">नहीं, अभी नहीं</span>
+</button>
+</div>
+<!-- Confirmation Message (Hidden initially) -->
+<div class="hidden bg-secondary-container text-on-secondary-container rounded-lg p-6 w-full flex items-start gap-4 border border-secondary shadow-sm transition-opacity duration-300 opacity-0" id="confirmation-message">
+<span class="material-symbols-outlined text-secondary mt-1" data-icon="info" style="font-variation-settings: 'FILL' 1;">info</span>
+<div>
+<p class="font-body-xl text-body-xl mb-2 font-bold">डेमो अलर्ट तैयार है।</p>
+<p class="font-body-lg text-body-lg text-on-secondary-fixed-variant">असली संदेश इस प्रोटोटाइप में नहीं भेजे जाते। (Demo alert ready. Real messages are not sent in this prototype.)</p>
+</div>
+</div>
+</main>
+<script>
+        function handleChoice(choice) {
+            const buttons = document.getElementById('action-buttons');
+            const message = document.getElementById('confirmation-message');
+            
+            // Hide buttons with a fade out
+            buttons.style.opacity = '0';
+            setTimeout(() => {
+                buttons.classList.add('hidden');
+                // Show confirmation message
+                message.classList.remove('hidden');
+                // Trigger reflow to ensure transition works
+                void message.offsetWidth;
+                message.style.opacity = '1';
+                
+                if (choice === 'yes') {
+                     message.querySelector('.material-symbols-outlined').textContent = 'check_circle';
+                     message.querySelector('.material-symbols-outlined').dataset.icon = 'check_circle';
+                } else {
+                     message.querySelector('.material-symbols-outlined').textContent = 'cancel';
+                     message.querySelector('.material-symbols-outlined').dataset.icon = 'cancel';
+                     message.querySelector('div').innerHTML = '<p class="font-body-xl text-body-xl mb-2 font-bold">अलर्ट रद्द किया गया।</p><p class="font-body-lg text-body-lg text-on-secondary-fixed-variant">(Alert cancelled.)</p>';
+                     message.classList.replace('bg-secondary-container', 'bg-surface-container');
+                     message.classList.replace('text-on-secondary-container', 'text-on-surface');
+                     message.classList.replace('border-secondary', 'border-outline');
+                     message.querySelector('.material-symbols-outlined').classList.replace('text-secondary', 'text-on-surface-variant');
+                }
+            }, 300);
+        }
+    </script>
+
+
+</body></html>

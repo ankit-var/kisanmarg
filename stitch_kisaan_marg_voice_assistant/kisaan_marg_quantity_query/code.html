@@ -1,0 +1,228 @@
+<!DOCTYPE html><html class="light" lang="hi"><head>
+<meta charset="utf-8">
+<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+<title>Kisaan Marg - Quantity Query</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible+Next:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Be+Vietnam+Pro:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet">
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error-container": "#93000a",
+                        "on-background": "#1a1d11",
+                        "tertiary-fixed": "#ffdcbe",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#f0f2df",
+                        "primary": "#00450d",
+                        "on-tertiary-container": "#ffb66b",
+                        "primary-fixed-dim": "#91d78a",
+                        "on-error": "#ffffff",
+                        "surface-container-low": "#f3f5e1",
+                        "on-secondary-container": "#00731e",
+                        "tertiary-container": "#794500",
+                        "outline-variant": "#c0c9bb",
+                        "on-surface": "#1a1d11",
+                        "secondary-container": "#91f78e",
+                        "on-primary-fixed": "#002203",
+                        "secondary": "#006e1c",
+                        "on-surface-variant": "#41493e",
+                        "on-secondary-fixed-variant": "#005313",
+                        "surface-dim": "#d9dcc8",
+                        "surface": "#f9fbe7",
+                        "outline": "#717a6d",
+                        "primary-fixed": "#acf4a4",
+                        "error": "#ba1a1a",
+                        "surface-bright": "#f9fbe7",
+                        "inverse-primary": "#91d78a",
+                        "surface-container-high": "#e8ead6",
+                        "primary-container": "#1b5e20",
+                        "on-secondary-fixed": "#002204",
+                        "on-primary-container": "#90d689",
+                        "tertiary": "#583100",
+                        "surface-container-highest": "#e2e4d1",
+                        "on-tertiary-fixed-variant": "#693c00",
+                        "surface-container": "#edf0dc",
+                        "on-primary": "#ffffff",
+                        "inverse-surface": "#2f3225",
+                        "background": "#f9fbe7",
+                        "error-container": "#ffdad6",
+                        "surface-variant": "#e2e4d1",
+                        "on-primary-fixed-variant": "#0c5216",
+                        "secondary-fixed": "#94f990",
+                        "secondary-fixed-dim": "#78dc77",
+                        "surface-container-lowest": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-tint": "#2a6b2c",
+                        "tertiary-fixed-dim": "#ffb870",
+                        "on-tertiary-fixed": "#2c1600"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "section-gap": "2.5rem",
+                        "stack-gap": "1rem",
+                        "touch-target-min": "56px",
+                        "margin-desktop": "4rem",
+                        "gutter": "1.5rem",
+                        "margin-mobile": "1rem"
+                    },
+                    "fontFamily": {
+                        "label-lg": ["Atkinson Hyperlegible Next"],
+                        "body-lg": ["Atkinson Hyperlegible Next"],
+                        "body-xl": ["Atkinson Hyperlegible Next"],
+                        "headline-lg": ["Be Vietnam Pro"],
+                        "headline-lg-mobile": ["Be Vietnam Pro"],
+                        "headline-xl": ["Be Vietnam Pro"]
+                    },
+                    "fontSize": {
+                        "label-lg": ["18px", { "lineHeight": "24px", "letterSpacing": "0.5px", "fontWeight": "600" }],
+                        "body-lg": ["20px", { "lineHeight": "28px", "fontWeight": "400" }],
+                        "body-xl": ["24px", { "lineHeight": "32px", "fontWeight": "500" }],
+                        "headline-lg": ["32px", { "lineHeight": "40px", "fontWeight": "700" }],
+                        "headline-lg-mobile": ["28px", { "lineHeight": "34px", "fontWeight": "700" }],
+                        "headline-xl": ["40px", { "lineHeight": "48px", "fontWeight": "700" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body {
+            -webkit-tap-highlight-color: transparent;
+        }
+        .mic-pulse {
+            animation: pulse-ring 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse-ring {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.4); }
+            70% { transform: scale(1.05); box-shadow: 0 0 0 20px rgba(255, 152, 0, 0); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(255, 152, 0, 0); }
+        }
+        .pb-safe { padding-bottom: env(safe-area-inset-bottom); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background min-h-screen flex flex-col font-body-lg">
+<!-- TopAppBar -->
+<header class="docked full-width top-0 bg-surface dark:bg-surface-dim shadow-sm z-50 transition-colors duration-200">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop py-4 w-full max-w-[800px] mx-auto">
+<button aria-label="Language options" class="flex items-center justify-center p-2 rounded-full hover:bg-surface-container-low transition-colors duration-200 text-primary dark:text-primary-fixed-dim">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">language</span>
+</button>
+<h1 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-primary dark:text-primary-fixed-dim tracking-tight">Kisaan Marg</h1>
+<button aria-label="Toggle Language" class="flex items-center justify-center px-4 py-2 rounded-full font-label-lg text-label-lg hover:bg-surface-container-low transition-colors duration-200 text-primary dark:text-primary-fixed-dim">हिंदी <span class="material-symbols-outlined ml-1 text-[18px]">arrow_drop_down</span></button>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="flex-grow flex flex-col items-center justify-center px-gutter pt-section-gap pb-[120px] max-w-[800px] mx-auto w-full relative">
+<!-- Progress Indicator -->
+<div class="w-full max-w-md mb-8 flex justify-between items-center gap-2">
+<div class="h-2 flex-1 bg-secondary rounded-full"></div>
+<div class="h-2 flex-1 bg-secondary rounded-full"></div>
+</div>
+<!-- Question Section -->
+<div class="w-full bg-surface-container-lowest rounded-xl p-6 shadow-sm border border-surface-container mb-stack-gap text-center relative overflow-hidden">
+<!-- Background Texture Hint -->
+<div class="absolute inset-0 opacity-5 pointer-events-none" style="background-image: repeating-linear-gradient(45deg, #00450d 0, #00450d 1px, transparent 0, transparent 50%); background-size: 10px 10px;"></div>
+<div class="relative z-10">
+<button aria-label="Play question audio" class="mb-4 w-16 h-16 rounded-full bg-surface-container flex items-center justify-center mx-auto hover:bg-surface-container-high transition-colors shadow-sm">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">volume_up</span>
+</button>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-xl md:text-headline-xl text-on-surface mb-2">आपके पास कितने किलो टमाटर हैं?</h2>
+<p class="font-body-xl text-body-xl text-on-surface-variant">How many kilos of tomatoes do you have?</p>
+</div>
+</div>
+<!-- Input Section -->
+<div class="w-full max-w-md flex flex-col items-center gap-stack-gap mt-8">
+<!-- Visual Confirmation Area -->
+<div class="w-full bg-surface-container-lowest border-2 border-outline-variant rounded-xl p-4 flex items-center justify-between shadow-sm min-h-[80px]">
+<span class="font-body-xl text-body-xl text-outline italic">यहाँ मात्रा दिखाई देगी... (Quantity will appear here...)</span>
+<!-- Hidden input for form submission if needed -->
+<input id="quantityInput" name="quantity" type="hidden">
+</div>
+<!-- Contextual Chips -->
+<div class="flex flex-wrap justify-center gap-4 w-full mt-4"><button class="bg-primary-container text-on-primary-container border border-primary rounded-full px-6 py-3 flex items-center gap-2 shadow-sm hover:bg-primary hover:text-on-primary active:scale-95 transition-all w-full justify-center mb-2">
+<span class="material-symbols-outlined">mic</span>
+<span class="font-label-lg">मात्रा बोलकर बताएं</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant rounded-full px-6 py-3 flex items-center gap-2 shadow-sm hover:bg-surface-container-high active:scale-95 transition-all text-on-surface">
+<span class="font-body-xl text-body-xl">50 Kg</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant rounded-full px-6 py-3 flex items-center gap-2 shadow-sm hover:bg-surface-container-high active:scale-95 transition-all text-on-surface">
+<span class="font-body-xl text-body-xl">100 Kg</span>
+</button>
+<button class="bg-surface-container-lowest border border-outline-variant rounded-full px-6 py-3 flex items-center gap-2 shadow-sm hover:bg-surface-container-high active:scale-95 transition-all text-on-surface">
+<span class="font-body-xl text-body-xl">500 Kg</span>
+</button>
+</div>
+<!-- Primary Microphone Action (Ergonomically placed in bottom third) -->
+<div class="mt-12 mb-8 relative flex justify-center w-full">
+<button aria-label="Tap to speak quantity" class="w-24 h-24 rounded-full bg-primary text-on-primary shadow-[0_4px_20px_rgba(255,152,0,0.2)] flex items-center justify-center transition-transform hover:scale-105 active:scale-95 z-20" id="mainMicBtn">
+<span class="material-symbols-outlined text-5xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-24 h-24 rounded-full border-4 border-[#FF9800] opacity-0 z-10 pointer-events-none" id="micIndicator"></div>
+<!-- Helper text -->
+<div class="absolute -bottom-10 left-1/2 -translate-x-1/2 whitespace-nowrap text-on-surface-variant font-label-lg text-label-lg">
+                    Tap to speak
+                </div>
+</div>
+</div>
+</main>
+<!-- Bottom Navigation / Footer Area (Suppressed global nav for transactional flow) -->
+<footer class="fixed bottom-0 w-full bg-surface border-t border-surface-container p-4 pb-safe flex justify-between items-center z-40 shadow-[0_-2px_10px_rgba(0,0,0,0.05)]">
+<button aria-label="Go back" class="flex items-center gap-2 text-primary px-4 py-2 rounded-lg hover:bg-surface-container-low transition-colors font-label-lg text-label-lg">
+<span class="material-symbols-outlined">arrow_back</span>
+            Back
+         </button>
+<div class="font-label-lg text-label-lg text-on-surface-variant bg-surface-container px-4 py-2 rounded-full">
+             Step 2 of 2
+         </div>
+<button aria-label="Confirm quantity" class="bg-primary text-on-primary px-6 py-3 rounded-lg font-label-lg text-label-lg shadow-sm hover:bg-primary-container transition-colors disabled:opacity-50 disabled:cursor-not-allowed flex items-center gap-2" disabled="">
+             Next
+             <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</footer>
+<script>
+        // Simple micro-interaction for the microphone button
+        const micBtn = document.getElementById('mainMicBtn');
+        const micIndicator = document.getElementById('micIndicator');
+        let isListening = false;
+
+        micBtn.addEventListener('click', () => {
+            isListening = !isListening;
+            
+            if (isListening) {
+                // Active state
+                micBtn.classList.remove('bg-primary');
+                micBtn.classList.add('bg-[#FF9800]', 'mic-pulse');
+                micBtn.setAttribute('aria-label', 'Listening...');
+                
+                // Haptic feedback if supported
+                if (navigator.vibrate) {
+                    navigator.vibrate(50);
+                }
+            } else {
+                // Inactive state
+                micBtn.classList.add('bg-primary');
+                micBtn.classList.remove('bg-[#FF9800]', 'mic-pulse');
+                micBtn.setAttribute('aria-label', 'Tap to speak quantity');
+            }
+        });
+    </script>
+
+
+
+
+</body></html>
